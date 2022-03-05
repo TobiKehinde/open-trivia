@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Trivia Quiz</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Start quiz page -->
+    <div class="container play_quiz">
+        <div id="quiz">
+            <h1>Open Trivia Quiz</h1>
+            <button class="justify-center">Play</button>
+        </div>
+    </div>
+
+    <!-- Rules of the Quiz -->
+    <div class="info_box">
+        <div class="info-title">
+            <h3>Rules of the Quiz</h3>
+        </div>
+        <div class="info-list">
+            <div class="info">
+                1. Each correct answer is <span>1 point</span> per question.
+            </div>
+            <div class="info">
+                2. You will only be awarded points on the basis of your correct answers.
+            </div>
+            <div class="info">
+                3. Once you select an answer, you cannot change it.
+            </div>
+            <div class="info">
+                4. You cannot exit from the Quiz until the end.
+            </div>
+            <div class="info">
+                5. The quiz comprises of <span>10 </span>multiple-choice questions from different categories.
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="justify-center">
+                <h3>Ultimate Sports Quiz</h3>
+            </div>
+        </header>
+        <div id="hud">
+            <div id="hud-item">
+                <p id="progressText" class="hud-prefix">
+                    Question
+                </p>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
+            </div>
+            <div id="hud-item">
+                <p class="hud-prefix">
+                    Score
+                </p>
+                <h1 class="hud-main-text" id="score">
+                    0
+                </h1>
+            </div>
+        </div>
+        <h3 id="question"></h3>
+        <div class="choice-container">
+            <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">B</p>
+            <p class="choice-text" data-number="2"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">C</p>
+            <p class="choice-text" data-number="3"></p>
+        </div>
+        <div class="choice-container">
+            <p class="choice-prefix">D</p>
+            <p class="choice-text" data-number="4"></p>
+        </div>
+        <!-- Show the finish button at the end of quiz -->
+        <div class="total_questions close">
+            <button class="finish">Finish Quiz</button>
+        </div>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box info_box justify-center">
+        <div class="icon">
+            <i class="fas fa-crown icon"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here, I have inserted the Score Result to be shown in a message box from JavaScript -->
+        </div>
+        <button class="quit">Quit Quiz</button>
+    </div>
+
+    <!-- This script file contains all script codes which applies JavaScript to fetch quiz questions from an API and other javaScript event functions -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
